@@ -30,139 +30,7 @@ get_header(); ?>
 
 
 				<!-- CALS News Content Box -->
-				<div class="row clearfix">
-
-					<div class="span-50 box dropin">
-
-							<h2>News</h2>
-
-							<?php switch_to_blog(20); ?>
-<?php query_posts("posts_per_page=1&category_name=featured-articles"); ?>
-<?php if (have_posts()) : ?>
-	<?php while (have_posts()) : the_post();  ?>
-
-	<?php	if ( has_post_thumbnail() ) {
-
-								//the_post_thumbnail();
-								echo get_the_post_thumbnail($page->ID, 'large');
-
-								} else {
-							//echo "<img src='".get_template_directory_uri()."/images/newsplaceholder1.jpeg' alt=' '>";
-							//echo '<img src="';
-							echo catch_that_news_image();
-							// echo '" alt="" />';
-
-						} ?>
-			<div class="boxContent">
-											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
-											<p><?php the_time('l, F jS, Y') ?></p>
-																						</div>
-														<div class="topShade"></div>
-							<div class="bottomShade"></div>
-
-
-
-
-
-
-	<?php endwhile; ?>
-<?php endif; ?>
-<?php restore_current_blog(); wp_reset_query(); ?>
-							<a href="http://news.cals.wisc.edu" class="moreButton">More News</a>
-
-
-						<div class="windows8">
-							<div class="wBall" id="wBall_1">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_2">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_3">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_4">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_5">
-							<div class="wInnerBall">
-							</div>
-							</div>
-						</div>
-
-						<div class="shade"></div>
-
-					</div>
-
-					<div class="span-50 box dropin2">
-							<?php
-								//hold original loop
-								$tmp_post = $post;
-
-								//get spotlight posts
-								$posts = get_posts('category_name=spotlight&numberposts=1');
-								foreach($posts as $post){
-									setup_postdata($post);?>
-
-								<?php	if ( has_post_thumbnail() ) {
-
-								//the_post_thumbnail();
-								echo get_the_post_thumbnail($page->ID, 'large');
-
-								} else {
-
-							//echo '<img src="';
-							echo catch_that_image();
-							// echo '" alt="" />';
-
-						} ?>
-
-																								<h2>Spotlight</h2>
-																						<div class="boxContent">
-											<h3 class="spotlight_title"><a href="<?php the_permalink();?>"><?php  the_title();?></a></h3>
-											<p><?php echo $post->post_excerpt;?></p>
-																						</div>
-																						<div class="topShade"></div>
-							<div class="bottomShade"></div>
-								<!-- .spotlight_slide -->
-												<?php
-
-								}
-								//restore original loop
-								$post = $tmp_post;
-							?>
-						<div class="windows8">
-							<div class="wBall" id="wBall_1">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_2">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_3">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_4">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_5">
-							<div class="wInnerBall">
-							</div>
-							</div>
-						</div>
-
-						<div class="shade"></div>
-					</div>
-
-				</div>
-
+				
 
 
 
@@ -178,7 +46,7 @@ get_header(); ?>
      // loop through the rows of data
     while ( have_rows('home_page_feature') ) : the_row();
 
-        if( get_row_layout() == 'full_width_promotion' ): ?>
+        if( get_row_layout() == 'full_width_container' ): ?>
 
           <div class="row clearfix">
 
@@ -247,6 +115,127 @@ get_header(); ?>
         <?php endif;
 
 
+				if( get_row_layout() == '2_column_container' ): ?>
+
+					<div class="row clearfix">
+
+
+
+
+						<div class="span-50 box dropin2">
+
+							<?php if( function_exists('get_field') && get_sub_field('2_column_image_1') ):
+
+								$attachment_id = get_sub_field('2_column_image_1'); $size = "medium";
+								$image = wp_get_attachment_image_src($attachment_id, $size);
+
+								$backgroundImg = "background: url('" . $image[0] . "') no-repeat; background-size: auto 100%; background-position: center center";
+								$slide = '<img height="' . $image[1] . '" width="' . $image[2] . '" src="' . $image[0] . '" alt=" ">';
+								echo $slide;
+							endif; ?>
+
+
+							<div class="boxContent">
+															<h3 class="spotlight_title"><a href="<?php the_sub_field('2_column_link_1'); ?>" rel="bookmark" title="Permanent Link to Title"><?php the_sub_field('2_column_linktitle_1'); ?></a> </h3>
+															<p><?php the_sub_field('2_column_caption_1'); ?></p>
+																										</div>
+																		<div class="topShade"></div>
+											<div class="bottomShade"></div>
+
+
+
+
+
+
+
+
+
+										<div class="windows8">
+											<div class="wBall" id="wBall_1">
+											<div class="wInnerBall">
+											</div>
+											</div>
+											<div class="wBall" id="wBall_2">
+											<div class="wInnerBall">
+											</div>
+											</div>
+											<div class="wBall" id="wBall_3">
+											<div class="wInnerBall">
+											</div>
+											</div>
+											<div class="wBall" id="wBall_4">
+											<div class="wInnerBall">
+											</div>
+											</div>
+											<div class="wBall" id="wBall_5">
+											<div class="wInnerBall">
+											</div>
+											</div>
+										</div>
+
+										<div class="shade"></div>
+
+									</div>
+
+									<div class="span-50 box dropin3">
+
+										<?php if( function_exists('get_field') && get_sub_field('2_column_image_2') ):
+
+											$attachment_id = get_sub_field('2_column_image_2'); $size = "medium";
+											$image = wp_get_attachment_image_src($attachment_id, $size);
+
+											$backgroundImg = "background: url('" . $image[0] . "') no-repeat; background-size: auto 100%; background-position: center center";
+											$slide = '<img height="' . $image[1] . '" width="' . $image[2] . '" src="' . $image[0] . '" alt=" ">';
+											echo $slide;
+										endif; ?>
+
+
+										<div class="boxContent">
+																		<h3 class="spotlight_title"><a href="<?php the_sub_field('2_column_link_2'); ?>" rel="bookmark" title="Permanent Link to Title"><?php the_sub_field('2_column_linktitle_2'); ?></a> </h3>
+																		<p><?php the_sub_field('2_column_caption_2'); ?></p>
+																													</div>
+																					<div class="topShade"></div>
+														<div class="bottomShade"></div>
+
+
+
+
+
+
+
+
+
+													<div class="windows8">
+														<div class="wBall" id="wBall_1">
+														<div class="wInnerBall">
+														</div>
+														</div>
+														<div class="wBall" id="wBall_2">
+														<div class="wInnerBall">
+														</div>
+														</div>
+														<div class="wBall" id="wBall_3">
+														<div class="wInnerBall">
+														</div>
+														</div>
+														<div class="wBall" id="wBall_4">
+														<div class="wInnerBall">
+														</div>
+														</div>
+														<div class="wBall" id="wBall_5">
+														<div class="wInnerBall">
+														</div>
+														</div>
+													</div>
+
+													<div class="shade"></div>
+
+												</div>
+
+
+					</div>
+
+				<?php endif;
 
 
     endwhile;
@@ -267,11 +256,11 @@ endif;
 
 				<div class="row clearfix">
 
-					<div class="span-33 box dropin3">
+					<div class="span-50 box dropin3">
 							<h2>Announcements</h2>
 
 							<?php switch_to_blog(19); ?>
-<?php query_posts("cat=17&posts_per_page=1"); ?>
+<?php query_posts("cat=12&posts_per_page=1"); ?>
 <?php if (have_posts()) : ?>
 	<?php while (have_posts()) : the_post();  ?>
 
@@ -329,13 +318,13 @@ endif;
 						<div class="shade"></div>
 					</div>
 
-					<div class="span-33 box eventsBox dropin4">
+					<div class="span-50 box eventsBox dropin4">
 							<h2>Events</h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/images/aghall1.jpg" alt=" ">
 							<div class="boxContent">
 
 
-	<?php //uwmadison_events('http://www.today.wisc.edu/events/feed/30', array('limit' => 2)) ?>
+	<?php uwmadison_events('http://www.today.wisc.edu/events/feed/30', array('limit' => 2)) ?>
 
 
 
@@ -373,70 +362,7 @@ endif;
 
 					</div>
 
-					<div class="span-33 box dropin5">
-							<h2>CALS Faces</h2>
 
-							<?php switch_to_blog(20); ?>
-<?php query_posts("posts_per_page=1&cat=17"); ?>
-<?php if (have_posts()) : ?>
-	<?php while (have_posts()) : the_post();  ?>
-
-	<?php	if ( has_post_thumbnail() ) {
-
-								//the_post_thumbnail();
-								echo get_the_post_thumbnail($page->ID, 'large');
-
-								} else {
-							//echo "<img src='".get_template_directory_uri()."/images/newsplaceholder1.jpeg' alt=' '>";
-							//echo '<img src="';
-							echo catch_that_news_image();
-							// echo '" alt="" />';
-
-						} ?>
-			<div class="boxContent">
-											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
-											<p><?php $academic_info = get_post_meta($post->ID, 'academic_info', true);
-				if($academic_info!=""){
-					echo $academic_info;
-				} ?></p>
-																						</div>
-														<div class="topShade"></div>
-							<div class="bottomShade"></div>
-
-
-
-
-
-
-	<?php endwhile; ?>
-<?php endif; ?>
-<?php restore_current_blog(); ?>
-<a href="http://news.cals.wisc.edu/category/departments/cals-faces/" class="moreButton">More CALS Faces</a>
-<div class="windows8">
-							<div class="wBall" id="wBall_1">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_2">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_3">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_4">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_5">
-							<div class="wInnerBall">
-							</div>
-							</div>
-						</div>
-
-						<div class="shade"></div>
-					</div>
 
 				</div>
 
