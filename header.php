@@ -469,7 +469,7 @@ $url = $thumb['0']; echo $url;
 
 
   			<div class="featureCaption">
-  				<div class="centered">
+  				<div class="centered small">
   				<h2><?php the_title(); ?></h2>
 
 	  				<div class="featuresubtitle">

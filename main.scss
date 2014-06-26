@@ -5885,7 +5885,7 @@ display: block;
 .home .collegeFeature li .featureCaption, .home .iosSlider .featureCaption {
 	display:block;
 	position: absolute;
-	bottom: 195px;
+	bottom: 215px;
 	top: auto;
 	left: 0px;
 	right: 0px;
@@ -5899,12 +5899,28 @@ display: block;
 	margin: 0 auto;
 }
 
+.collegeFeature li .featureCaption .centered.small, .iosSlider .featureCaption .centered.small {
+	width: 400px;
+	text-align: center;
+}
+
+.featureCaption .centered.small h2 {
+	margin-bottom: 0.6em;
+}
+
+.featureCaption .centered.small .featuresubtitle {
+	padding-bottom: 0.6em;
+}
+
+
 .collegeFeature li .featureCaption h2, .iosSlider h2 {
 	margin: 0px;
 	font-family: "Open Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-size: 46px;
-	font-weight: 300;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .collegeFeature li .featureCaption h2.thin, .collegeFeature li .featureCaption h2 .thin, .collegeFeature .iosSlider h2 .thin, .collegeFeature .iosSlider h2.thin {
