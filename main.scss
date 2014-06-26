@@ -3939,6 +3939,19 @@ a code {
 	color:#fff;
 }
 
+.row .box .boxContent a {
+	color:#deb846;
+}
+
+.row .box .boxContent ul {
+	margin-bottom: 0px;
+	color: #fff;
+}
+
+.row .box .boxContent ul li {
+	color: #fff;
+}
+
 .fixedBottom {
 	position: fixed;
 	bottom: 0px;
@@ -5885,7 +5898,7 @@ display: block;
 .home .collegeFeature li .featureCaption, .home .iosSlider .featureCaption {
 	display:block;
 	position: absolute;
-	bottom: 215px;
+	bottom: 235px;
 	top: auto;
 	left: 0px;
 	right: 0px;
