@@ -30,7 +30,7 @@ get_header(); ?>
 
 
 				<!-- CALS News Content Box -->
-				
+
 
 
 
@@ -134,16 +134,17 @@ get_header(); ?>
 								echo $slide;
 							endif; ?>
 
+							<h2><?php the_sub_field('2_column_linktitle_1'); ?></h2>
 
 							<div class="boxContent">
-															<h3 class="spotlight_title"><a href="<?php the_sub_field('2_column_link_1'); ?>" rel="bookmark" title="Permanent Link to Title"><?php the_sub_field('2_column_linktitle_1'); ?></a> </h3>
-															<p><?php the_sub_field('2_column_caption_1'); ?></p>
+
+															<?php the_sub_field('2_column_caption_1'); ?>
 																										</div>
 																		<div class="topShade"></div>
 											<div class="bottomShade"></div>
 
 
-
+<a href="<?php the_sub_field('2_column_link_1'); ?>" class="moreButton">More <?php the_sub_field('2_column_linktitle_1'); ?></a>
 
 
 
@@ -189,17 +190,19 @@ get_header(); ?>
 											echo $slide;
 										endif; ?>
 
+										<h2><?php the_sub_field('2_column_linktitle_2'); ?></h2>
+
 
 										<div class="boxContent">
-																		<h3 class="spotlight_title"><a href="<?php the_sub_field('2_column_link_2'); ?>" rel="bookmark" title="Permanent Link to Title"><?php the_sub_field('2_column_linktitle_2'); ?></a> </h3>
-																		<p><?php the_sub_field('2_column_caption_2'); ?></p>
+
+																	<?php the_sub_field('2_column_caption_2'); ?>
 																													</div>
 																					<div class="topShade"></div>
 														<div class="bottomShade"></div>
 
 
 
-
+														<a href="<?php the_sub_field('2_column_link_2'); ?>" class="moreButton">More <?php the_sub_field('2_column_linktitle_2'); ?></a>
 
 
 
