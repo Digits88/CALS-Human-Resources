@@ -388,9 +388,9 @@ get_header(); ?>
 
 												
 
-										<?php if( function_exists('get_field') && get_sub_field('3_column_image_2') ):
+										<?php if( function_exists('get_field') && get_sub_field('3_column_image_3') ):
 
-											$attachment_id = get_sub_field('3_column_image_2'); $size = "medium";
+											$attachment_id = get_sub_field('3_column_image_3'); $size = "medium";
 											$image = wp_get_attachment_image_src($attachment_id, $size);
 
 											$backgroundImg = "background: url('" . $image[0] . "') no-repeat; background-size: auto 100%; background-position: center center";
@@ -398,19 +398,19 @@ get_header(); ?>
 											echo $slide;
 										endif; ?>
 
-										<h2><?php the_sub_field('3_column_linktitle_2'); ?></h2>
+										<h2><?php the_sub_field('3_column_linktitle_3'); ?></h2>
 
 
 										<div class="boxContent">
 
-																	<?php the_sub_field('3_column_caption_2'); ?>
+																	<?php the_sub_field('3_column_caption_3'); ?>
 																													</div>
 																					<div class="topShade"></div>
 														<div class="bottomShade"></div>
 
 
 
-														<a href="<?php the_sub_field('3_column_link_2'); ?>" class="moreButton">More <?php the_sub_field('3_column_linktitle_2'); ?></a>
+														<a href="<?php the_sub_field('3_column_link_3'); ?>" class="moreButton">More <?php the_sub_field('3_column_linktitle_3'); ?></a>
 
 
 
