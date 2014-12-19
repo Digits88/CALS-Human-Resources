@@ -345,7 +345,7 @@ $pages = get_pages();
 
 					<?php //comments_template( '', true ); ?>
 
-					<?php $args = array( 'post_type' => 'headerslides', 'posts_per_page' => 1 );
+					<?php $args = array( 'post_type' => 'headerslides', 'posts_per_page' => 5 );
 					$loop = new WP_Query( $args );
 					$loopcount = 0;
 					while ( $loop->have_posts() ) : $loop->the_post();
