@@ -38,6 +38,17 @@
  */
 // Callback function to insert 'styleselect' into the $buttons array
 
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/site-login-logo.png);
+            height: 102px;
+            background-size: 270px 102px;
+            width: 270px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
