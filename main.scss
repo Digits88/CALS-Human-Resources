@@ -2515,6 +2515,17 @@ section.recent-posts .other-recent-posts li:after {
 /* =Widgets
 ----------------------------------------------- */
 
+.widgetSidebar {
+	width: 230px;
+	float:right;
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: 3px;
+	padding: 1em;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+	margin-bottom: 1em;
+}
+
 .widget-area {
 	font-size: 12px;
 }

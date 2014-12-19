@@ -490,14 +490,14 @@ function twentyeleven_widgets_init() {
 	register_widget( 'Twenty_Eleven_Ephemera_Widget' );
 
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'twentyeleven' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
+		'name' => __( 'Page Sidebar', 'twentyeleven' ),
+		'id' => 'page-sidebar',
+		'before_widget' => ' <div class="widgetSidebar"><aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside></div>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-
+/*
 	register_sidebar( array(
 		'name' => __( 'Home Page Showcase', 'twentyeleven' ),
 		'id' => 'sidebar-2',
@@ -506,7 +506,7 @@ function twentyeleven_widgets_init() {
 		'after_widget' => "<div class='hiddendate'>-10130408</div><div class='hiddengroup'>Anchored</div><span class='number'>11</span></div></div>",
 		'before_title' => '<div class="titleheading"><h3>',
 		'after_title' => '</h3></div>',
-	) );
+	) );*/
 
 	/*register_sidebar( array(
 		'name' => __( 'Footer Area One', 'twentyeleven' ),
