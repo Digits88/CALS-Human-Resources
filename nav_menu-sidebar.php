@@ -27,7 +27,7 @@ function cals_page_navigation_menu($post, $parent_before = '', $parent_after= ''
 		
 	//This condition keeps the nav bar from printing every single child page
 	if($top_ancestor == $post->ID || is_page($post->ID) || in_array($post->ID, $current_page_ancestors)){
-		$children = get_pages('child_of='.$post->ID.'&parent='.$post->ID.'&hierarchical=0&post_type=page&sort_column=menu_order&sort_order=ASC');
+		$children = get_pages('child_of='.$post->ID.'&parent='.$post->ID.'&hierarchical=0&post_type=page&sort_column=post_title&sort_order=ASC');
 	}
 	
 	//Is the current item the top ancestor?

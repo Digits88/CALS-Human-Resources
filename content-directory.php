@@ -37,9 +37,23 @@
 		<div class="row"><div class="subTitle">Office</div><?php the_field('office_location'); ?></div>
 		<?php } ?>
 		
+		
+		
+		
+		
 		<?php //wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'uwmadison' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
+</div>
+	<div class="textCopy profileColumn3">
+		<?php if(get_field('contact_department')) { ?>
+		<div class="row"><div class="subTitle">Contacts By Department</div>
+			<?php the_field('contact_department'); ?>
+			</div>
+		<?php } ?>
+	</div>
+	
+	
 	<footer class="entry-meta">
 	</footer><!-- .entry-meta -->
-</div>
+
 </div><!-- #post-<?php the_ID(); ?> -->

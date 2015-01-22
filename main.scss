@@ -4005,7 +4005,8 @@ a code {
 }
 
 .featureCaption .featuresubtitle {
-	color: #deb846;
+	color: #fff;
+	text-shadow:0px 1px 5px rgba(0,0,0,0.7);
 }
 
 a:hover,
@@ -4838,6 +4839,8 @@ transform: rotate(900deg);
 	box-sizing: border-box;
 }
 
+
+
 .filtered2 li .subTitle, .singleProfileText .subTitle {
 	font-weight: bold;
 	text-transform: uppercase;
@@ -4846,11 +4849,21 @@ transform: rotate(900deg);
 	font-size: 10px;
 }
 
+.filtered2 li .subTitle, .singleProfileText .subTitle {
+		
+}
+
 .filtered2 li .entry-title {
 	font-size: 22px;
-	margin-top: 15px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 	line-height: 1em;
+	padding-top: 0px;
+}
+
+.filtered2 li .entry-content {
+	margin-top: 0px;
+	padding-top: 0px;
 }
 
 #prof_s {
@@ -4876,6 +4889,10 @@ transform: rotate(900deg);
 	margin-top: 0.6em;
 }
 
+.filtered2 li .profileColumn2 .row:first-child, .singleProfileText .row:first-child {
+	margin-top: 0px;
+}
+
 .filtered2 li .imageCrop {
 	width: 100px;
 	height: 100px;
@@ -4890,7 +4907,7 @@ transform: rotate(900deg);
 }
 
 .filtered2 li .textCopy {
-	width: 40%;
+	width: 28%;
 	float: left;
 }
 
@@ -5363,14 +5380,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', e
 	bottom: 180px;
 	left: 0px;
 	right: 0px;
-	height: 100px;
+	height: 140px;
 	z-index:3;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.6))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* W3C */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.8))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */}
 
 .headertransition {
@@ -5546,7 +5563,7 @@ background-size: 100% auto;
 }
 
 .collegeFeature h2, .iosSlider h2 {
-	text-shadow: 0px 1px 14px rgba(0,0,0,0.5);
+	text-shadow: 0px 1px 5px rgba(0,0,0,0.9); 
 }
 
 .aboutCALSMission {
