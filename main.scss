@@ -4790,7 +4790,7 @@ transform: rotate(900deg);
 }
 
 .home.page .fullWidth .row .box {
-	height: 315px; 
+	height: 320px; 
 } 
 
 .page-id-64 .row .box {
@@ -4804,6 +4804,127 @@ transform: rotate(900deg);
 .page .fullWidth .row .box {
 	height: 260px;
 }
+
+
+.filtered2 li {
+	list-style: none;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #ececec;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	margin-top: 1em;
+	font-size: 14px;
+}
+
+.imagePlacement.singleProfile {
+	float:left;
+	width: 45%;
+	
+	padding-right: 5%;
+	border-right: 1px solid #ececec;
+	box-sizing: border-box;
+}
+
+.imagePlacement.singleProfile img {
+	width: 100%;
+	height: auto;
+	max-width: 240px;
+	float:right;
+	}
+
+.singleProfileText {
+	float: right;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.filtered2 li .subTitle, .singleProfileText .subTitle {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.5);
+	letter-spacing: 1px;
+	font-size: 10px;
+}
+
+.filtered2 li .entry-title {
+	font-size: 22px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	line-height: 1em;
+}
+
+#prof_s {
+	width: 100%;
+	background: none;
+	border: none;
+	border-bottom: 1px solid #ececec;
+	box-shadow: none;
+	font-size: 36px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	background: url("images/search-icon.svg") no-repeat;
+	background-size: 45px;
+	background-position: 0px 10px;
+	padding-left: 50px;
+}
+
+.filtered2 li .profileColumn1 {
+	padding-left: 1.5em;
+}
+
+.filtered2 li .profileColumn2 .row, .singleProfileText .row {
+	margin-top: 0.6em;
+}
+
+.filtered2 li .imageCrop {
+	width: 100px;
+	height: 100px;
+	border-radius: 50em;
+	overflow: hidden;
+	float: left;
+}
+
+.filtered2 li .imageCrop img {
+	width: 100%;
+	height: auto;
+}
+
+.filtered2 li .textCopy {
+	width: 40%;
+	float: left;
+}
+
+.breadcrumb {
+	font-size: 12px;
+	margin-bottom: 1.2em;
+
+	.breadcrumb_item {
+		position: relative;
+display: inline-block;
+margin-right: 12px;
+	}
+
+	.nav_arrow {
+		position: absolute;
+		top: 3px;
+		right: -13px;
+		height: 1em;
+		width: 1em;
+		
+		svg {
+			width: 1em;
+			height: 1em;
+		}
+	}
+	
+	.breadcrumb_item:last-child {
+		.nav_arrow {
+			display: none;
+		}
+	}
+
+}
+
 
 
 

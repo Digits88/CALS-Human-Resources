@@ -347,7 +347,7 @@ var countFeatures = 0;
 
 		   $('.iosSlider .slider').html(mobileFeatures);
 
-		var duration = 20000;
+		var duration = 10000;
 		var halfd = duration /2;
 		var time1,time2;
     	time1 = setInterval(function() {nextSlide();},duration);
