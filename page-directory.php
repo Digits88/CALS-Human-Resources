@@ -20,7 +20,7 @@ get_header(); ?>
 		
 			<div id="content" role="main">
 
-				<div id="prof_s_wrapper" ><input id="prof_s" class="field" type="text" placeholder="Filter Profiles" name="s_profiles"></div>
+				<div id="prof_s_wrapper" ><input id="prof_s" class="field" type="text" placeholder="Filter Staff" name="s_profiles"></div>
 				
 				<div class="filtered2">
 
