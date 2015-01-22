@@ -117,7 +117,7 @@ get_header(); ?>
 
 				if( get_row_layout() == '2_column_container' ): ?>
 
-					<div class="row clearfix">
+					<div class="row linkbox clearfix">
 
 
 						<?php if( function_exists('get_field') && get_sub_field('2_column_image_1') ) { ?>
@@ -253,7 +253,7 @@ get_header(); ?>
 
 				if( get_row_layout() == '3_column_container' ): ?>
 
-					<div class="row clearfix">
+					<div class="row linkbox clearfix">
 
 						<?php if( function_exists('get_field') && get_sub_field('3_column_image_1') ) { ?>
 								<div class="span-33 box dropin2">
